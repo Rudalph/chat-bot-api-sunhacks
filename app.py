@@ -12,7 +12,7 @@ from flask_cors import CORS
 import os
 
 app = Flask(__name__)
-CORS(app)
+CORS(app, resources={r"/ask": {"origins": "https://life-balance-360.vercel.app"}})
 
 os.environ["GOOGLE_API_KEY"] = "AIzaSyCVfRHMPDHEwNMFdwlAcuYhKyxegzGKhYY"
 
