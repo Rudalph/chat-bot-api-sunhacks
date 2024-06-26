@@ -14,9 +14,9 @@ import os
 app = Flask(__name__)
 CORS(app, resources={r"/ask": {"origins": "https://life-balance-360.vercel.app"}})
 
-os.environ["GOOGLE_API_KEY"] = "AIzaSyCVfRHMPDHEwNMFdwlAcuYhKyxegzGKhYY"
+os.environ["GOOGLE_API_KEY"] = "AIzaSyC5agUKvQR7gBuutdV0FSo0tpz2MRn8uL4"
 
-llm = ChatGoogleGenerativeAI(model="gemini-pro")
+llm = ChatGoogleGenerativeAI(model="models/gemini-1.5-pro-latest")
 embeddings = GoogleGenerativeAIEmbeddings(model="models/embedding-001")
 
 directory="./ChatBotData"
